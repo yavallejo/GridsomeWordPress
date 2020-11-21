@@ -1,0 +1,257 @@
+::selection {
+    @apply text-white bg-primary;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    @apply font-normal text-dark-1 font-inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: rem(16px);
+    line-height: 26px;
+    hyphens: none;
+    word-break: keep-all;
+    word-wrap: normal;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        @apply font-bold mb-4 text-dark-1 font-playfair;
+        hyphens: none;
+        letter-spacing: -0.02em;
+        word-break: keep-all;
+        word-wrap: normal;
+        a {
+            @apply text-light-3;
+
+            &:hover {
+                @apply text-primary;
+            }
+        }
+    }
+    h1,
+    .h1 {
+        font-size: 4rem;
+        line-height: 2.4rem;
+        @screen sm {
+            font-size: 3rem;
+            line-height: 3.6rem;
+        }
+    }
+    h2,
+    .h2 {
+        font-size: 2.25rem;
+        line-height: 2.9375rem;
+    }
+    h3,
+    .h3 {
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
+    }
+    h4,
+    .h4 {
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+    }
+    h5,
+    .h5 {
+        font-size: 1rem;
+        line-height: 1.4375rem;
+    }
+    h6,
+    .h6 {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+    }
+
+    ul {
+        li {
+            @apply mb-4;
+        }
+    }
+
+    .info {
+        ul {
+            li {
+                @apply relative mb-4;
+                padding-left: 25px;
+                &:before {
+                    @apply absolute left-0;
+                    background-image: url("../img/list.png");
+                    background-repeat: no-repeat;
+                    background-size: 50% 50%;
+                    content: "";
+                    height: 36px;
+                    top: 3px;
+                    width: 36px;
+                }
+                li {
+                    &:first-child {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+        a {
+            @apply underline;
+        }
+    }
+}
+
+p {
+    @apply text-dark-3 mb-4;
+    hyphens: none;
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+a {
+    @apply text-primary;
+    @mixin fade;
+    &:hover {
+        @apply text-secondary;
+    }
+}
+
+input[type="text"],
+select,
+textarea {
+    @apply text-light-1 font-normal;
+    border-radius: 9px;
+    border: 1px solid theme(colors.primary);
+    box-sizing: border-box;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 22px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+select {
+    @apply appearance-none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */
+    background: url("../img/arrow-select.svg") #fff no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+    background: url("../img/arrow-select.svg") #fff no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+}
+/*For IE*/
+select::-ms-expand {
+    @apply hidden;
+}
+
+iframe {
+    @apply w-full;
+}
+
+/* Content Editor */
+
+.info {
+    a {
+        @apply font-bold underline;
+        &.btn {
+            @apply no-underline;
+            font-weight: inherit;
+        }
+    }
+}
+
+/* Base Image WordPress */
+
+img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+a img.alignright {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+a img.alignleft {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="text"],
+select,
+textarea {
+    @apply appearance-none w-full text-dark-3 py-4;
+    border-radius: 4px;
+    border: 1px solid theme(colors.light-2);
+    box-sizing: border-box;
+    &:hover,
+    &:focus {
+        outline: 1px solid theme(colors.primary);
+    }
+}
+
+blockquote {
+    &:before {
+        @apply text-center block font-playfair font-bold mb-2;
+        content: "“";
+        color: #c8c8e4;
+        font-size: 96px;
+        margin-top: 20px;
+    }
+    p {
+        @apply text-center mb-0 text-dark-2 title--5;
+        @screen md {
+            @apply title--4;
+        }
+        @screen lg {
+            @apply title--3;
+        }
+    }
+}
+
+/*content page*/
+.content__page {
+    iframe {
+        border-radius: 10px;
+        height: 450px;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply mt-8 text-dark-1;
+    }
+}
+
+.breadcrumbs {
+    @apply title--lead text-dark-1;
+    span {
+        @apply text-dark-1;
+    }
+}

@@ -1,0 +1,96 @@
+.services {
+    &__mainInformation {
+        @apply bg-light-1 px-4;
+        padding-top: 72px;
+        padding-bottom: 72px;
+        &--box {
+            @mixin center-block 752px;
+        }
+        &--description {
+            margin-top: 32px;
+            margin-bottom: 56px;
+        }
+    }
+    &__specialization {
+        @apply px-4;
+        @mixin section-padding 60px, 60px;
+        @screen lg {
+            @apply grid grid-cols-12 px-0;
+            @mixin section-padding 88px, 88px;
+        }
+        &--title {
+            @apply title--5 text-dark-1;
+            @screen md {
+                @apply title--4 mb-6;
+            }
+            @screen lg {
+                @apply title--3 col-start-1 col-end-5 mb-0;
+            }
+        }
+        &--right {
+            @screen lg {
+                @apply col-start-6 col-end-12;
+            }
+            ul {
+                @screen md {
+                    columns: 2;
+                    column-gap: 60px;
+                }
+                li {
+                    @apply text-dark-3 title--lead;
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+    &__secondaryInformation {
+        @apply bg-light-1 px-4;
+        @mixin section-padding 58px, 58px;
+        @screen md {
+            @apply px-0;
+        }
+        &Container {
+            @mixin center-block 752px;
+            h4 {
+                margin-bottom: 29px;
+            }
+            p {
+                @apply mb-0;
+            }
+        }
+    }
+    &__cta {
+        @apply text-center text-light-1 title--lead px-4;
+        @mixin background-image;
+        @mixin section-padding 74px, 74px;
+        p {
+            @apply text-light-1;
+        }
+    }
+}
+
+/* Fix Form Free services */
+
+.single-service {
+    .freeConsultations {
+        @screen md {
+            @mixin section-padding 100px, 100px;
+        }
+    }
+}
+
+.last-post {
+    @apply mx-auto pb-16 px-4;
+    @screen md {
+        @apply px-0;
+    }
+    &--title {
+        @apply title--4 text-dark-2 mb-6;
+        @screen md {
+            @apply title--3;
+        }
+        @screen lg {
+            @apply title--2;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.error {
+    background-image: url("../img/bg-404-tablet.jpg");
+    @mixin background-image;
+    @mixin section-padding 90px, 90px;
+    @screen md {
+        @mixin section-padding 185px, 185px;
+    }
+    @screen lg {
+        @mixin section-padding 170px, 170px;
+        background-image: url("../img/bg-404.jpg");
+    }
+    &__box {
+        &--number {
+            @apply font-medium font-inter text-center text-primary block;
+            font-size: 200px;
+            line-height: 328px;
+        }
+    }
+    &__icon {
+        @mixin center-block 250px;
+        margin-bottom: 10px;
+        @screen md {
+            max-width: 371px;
+        }
+    }
+    &__title {
+        @apply title--3 text-dark-1 text-center;
+        margin-bottom: 15px;
+        @screen md {
+            @apply title--2;
+        }
+        @screen lg {
+            @apply title--1;
+            margin-bottom: 30px;
+        }
+    }
+    &__description {
+        @apply text-center text-dark-3;
+        a {
+            margin-top: 21px;
+            display: inline-block;
+            @screen md {
+                margin-bottom: 22px;
+            }
+        }
+    }
+}
+
+.confirmation {
+    @apply bg-light-1;
+    background-image: none;
+    .error__icon {
+        max-width: 124px;
+    }
+    .error__description {
+        @apply mb-0;
+        p {
+            @apply text-primary;
+        }
+    }
+}

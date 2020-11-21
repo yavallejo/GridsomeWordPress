@@ -1,0 +1,95 @@
+.contact {
+    &__box {
+        border-top: 1px solid #f4f4f5;
+        border-bottom: 1px solid #f4f4f5;
+    }
+    &__grid {
+        @apply flex flex-col;
+        @screen lg {
+            @apply grid grid-cols-12;
+        }
+        &--left {
+            @apply bg-light-1;
+            order: 2;
+            padding: 40px 16px;
+            @screen md {
+                padding: 40px 50px;
+            }
+            @screen lg {
+                @apply col-start-1 col-end-6;
+                padding: 80px 50px;
+                order: 0;
+            }
+        }
+        &--right {
+            padding: 40px 16px;
+            order: 1;
+            @screen md {
+                padding: 40px 50px;
+            }
+            @screen lg {
+                @apply col-start-6 col-end-13;
+                padding-left: 90px;
+                padding-top: 44px;
+                padding-bottom: 44px;
+                order: 0;
+            }
+        }
+    }
+    &__item {
+        @apply text-dark-3;
+        @screen md {
+            @apply flex justify-between;
+        }
+        @screen lg {
+            @apply flex-col;
+        }
+        svg {
+            @apply block mr-3;
+        }
+        span {
+            @apply mb-0 block;
+            max-width: 265px;
+            a {
+                color: inherit;
+                &:hover {
+                    @apply text-primary;
+                }
+            }
+        }
+        &--info {
+            @apply flex flex-col;
+            margin-bottom: 24px;
+        }
+    }
+    &__share {
+        @apply flex items-center;
+        margin-top: 30px;
+        @screen md {
+            @apply hidden;
+        }
+        @screen lg {
+            @apply flex;
+            margin-top: 100px;
+        }
+        .socialIcons {
+            @apply mt-0;
+            margin-left: 26px;
+        }
+    }
+    &__header {
+        @apply mb-8;
+        @screen md {
+            @apply flex justify-between items-center;
+        }
+        .contact__share {
+            @apply hidden;
+            @screen md {
+                @apply flex mt-0;
+            }
+            @screen lg {
+                @apply hidden;
+            }
+        }
+    }
+}

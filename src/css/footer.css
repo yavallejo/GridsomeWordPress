@@ -1,0 +1,74 @@
+.copyright {
+    @apply mt-4 text-dark-3;
+    font-size: 14px;
+    @screen sm {
+        font-size: 16px;
+    }
+    @screen md {
+        @apply mt-8;
+    }
+    p {
+        @apply mb-0;
+    }
+}
+
+.footer {
+    @apply px-4;
+    border-top: 1px solid #e4e4f7;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    @screen md {
+        @apply px-0;
+    }
+    &__copyright,
+    &__menu {
+        @apply mt-4;
+
+        ul {
+            @apply flex justify-center;
+            @screen xl {
+                @apply justify-end;
+            }
+            li {
+                @apply mr-6 mb-0;
+                &:last-child {
+                    @apply mr-0;
+                }
+                a {
+                    @apply title--button text-primary;
+                    &:hover {
+                        @apply text-secondary;
+                    }
+                }
+            }
+        }
+    }
+    &__copyright {
+        @screen xl {
+            margin-top: 40px;
+        }
+        ul {
+            @apply flex-wrap;
+            li {
+                a {
+                    @apply title--body text-dark-3;
+                    font-size: 14px;
+                    @screen sm {
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        @apply text-dark-2;
+                    }
+                }
+            }
+        }
+    }
+
+    .sitelogo {
+        @mixin center-block 207px;
+
+        @screen xl {
+            @apply mx-0;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.btn {
+    &--primary {
+        @apply bg-primary title--button text-white;
+        border-radius: 4px;
+        padding: 21px 60px;
+        &:hover {
+            @apply text-white bg-secondary;
+        }
+    }
+}

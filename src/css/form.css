@@ -1,0 +1,93 @@
+.gform_wrapper {
+    .gform_body {
+        ul {
+            li {
+                @apply mt-0 pl-0 !important;
+                margin-bottom: 35px;
+                @screen md {
+                    @apply px-0 !important;
+                }
+                @screen xl {
+                    margin-bottom: 25px;
+                }
+                &:before {
+                    background-image: none;
+                }
+                &:last-child {
+                    @apply mb-0;
+                }
+                label {
+                    @apply mb-4 text-dark-2 title--5 font-normal;
+                }
+                .ginput_complex {
+                    label {
+                        @apply mb-0 !important title--lead text-dark-3;
+                    }
+                }
+                div.ginput_container {
+                    @apply mt-0 !important;
+                    input {
+                        border: 1px solid theme(colors.light-2);
+                        padding: 10px !important;
+                        @screen md {
+                            padding: 16px 10px !important;
+                        }
+                    }
+                }
+                &.labelBody {
+                    @apply mb-0;
+                    label {
+                        @apply title--body text-dark-3 font-normal inline !important;
+                    }
+                }
+                textarea {
+                    @apply text-dark-3;
+                    border: 1px solid theme(colors.light-2);
+                }
+                select {
+                    padding: 16px 5px !important;
+                }
+
+                /* Field Description */
+
+                .gfield_description {
+                    @apply pt-0 text-dark-3 title--body;
+                }
+            }
+        }
+
+        /* Fix label bottom */
+
+        .field_sublabel_below .ginput_complex.ginput_container label,
+        .field_sublabel_below
+            div[class*="gfield_time_"].ginput_container
+            label {
+            margin-bottom: 0;
+        }
+    }
+
+    /* Fix Class 50 % */
+
+    .top_label li.gfield.gf_left_half {
+        padding-right: 16px !important;
+    }
+    .gform_page_footer,
+    .gform_footer {
+        @apply py-0 !important;
+        margin-top: 32px !important;
+        input.button,
+        input[type="image"],
+        input[type="submit"] {
+            @apply bg-primary text-white title--button cursor-pointer border-0 block w-full !important;
+            border-radius: 4px;
+            padding-top: 22px;
+            padding-bottom: 22px;
+            &:hover {
+                @apply bg-secondary;
+            }
+            &:focus {
+                @apply outline-none;
+            }
+        }
+    }
+}
