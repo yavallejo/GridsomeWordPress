@@ -87,7 +87,7 @@ export default {
   metaInfo () {
       
     return {
-      title: 'Hola'
+      title: 'About'
     }
   }
 }

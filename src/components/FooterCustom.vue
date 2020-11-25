@@ -6,7 +6,7 @@
                 <div class="sitelogo">
                     <div class="sitelogo">
                       <g-link to="/">
-                        <img src="http://melagridsome.local/wp-content/uploads/2020/11/the-malena-law-firm-logo-black.png">
+                        <g-image src="@/assets/img/the-malena-law-firm-logo-black.png"/>
                       </g-link>
                     </div>
                 </div>
