@@ -5,12 +5,10 @@ const postcssmixins = require("postcss-mixins");
 const postcssnested = require("postcss-nested");
 const postcsssimplevars= require("postcss-simple-vars");
 const autoprefixer = require("autoprefixer");
-const purgecss = require("@fullhuman/postcss-purgecss");
+
 
 const postcssPlugins = [tailwind(), precss(), postcssrem(), postcssmixins(), postcssnested(), postcsssimplevars(), autoprefixer()];
 
-if (process.env.NODE_ENV === "production")
-  postcssPlugins.push(purgecss(require("./purgecss.config.js")));
 
 module.exports = {
   siteName: 'Gridsome',
@@ -25,7 +23,7 @@ module.exports = {
     {
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: 'http://melagridsome.local/', // required
+        baseUrl: 'https://gridsome.preview.devsrvr.fpsdv.com/', // required
         typeName: 'WordPress', // GraphQL schema name (Optional)
       }
     }

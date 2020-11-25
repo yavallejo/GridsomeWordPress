@@ -3,4 +3,4 @@
   command = "gridsome build"
   
 [template.environment]
-  WORDPRESS_URL = "http://melagridsome.local/"
+  WORDPRESS_URL = "https://gridsome.preview.devsrvr.fpsdv.com/"
